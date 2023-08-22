@@ -1,7 +1,7 @@
 name = "HyFlex"
 uuid = "91fd1720-3559-46da-9fc7-1cf77dc63782"
 authors = ["Johan Van Kerckhoven <johan.vankerckhoven@gmail.com> and contributors"]
-version = "1.0.0-DEV"
+version = "0.0.1"
 
 [compat]
 julia = "1"
