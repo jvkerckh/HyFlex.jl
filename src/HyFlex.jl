@@ -1,5 +1,11 @@
 module HyFlex
 
-# Write your package code here.
+using Random
+
+include("abstracttypes.jl")
+
+include("ProblemDomain/ProblemDomain.jl")
+
+include("verifytypes.jl")
 
 end
