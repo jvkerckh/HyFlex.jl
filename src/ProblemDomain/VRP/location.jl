@@ -1,14 +1,6 @@
 export  VRPLocation,
         copyLocation,
         compareLocation
-        # compareLocation,
-        # getId, setId!,
-        # getXCoord, setXCoord!,
-        # getYCoord, setYCoord!,
-        # getDemand, setDemand!,
-        # getDueDate, setDueDate!,
-        # getServiceTime, setServiceTime!,
-        # isServiced, setServiced!
 
 
 mutable struct VRPLocation
@@ -46,33 +38,3 @@ function Base.:(==)( loc1::VRPLocation, loc2::VRPLocation )
 end
 
 compareLocation( loc1::VRPLocation, loc2::VRPLocation ) = loc1 == loc2
-
-
-#=
-getId( loc::VRPLocation ) = loc.id
-setId!( loc::VRPLocation, id::Integer ) = loc.id = id
-
-getXCoord( loc::VRPLocation ) = loc.x
-setXCoord!( loc::VRPLocation, x::Integer ) = loc.x = x
-
-getYCoord( loc::VRPLocation ) = loc.y
-setYCoord!( loc::VRPLocation, y::Integer ) = loc.y = y
-
-getDemand( loc::VRPLocation ) = loc.demand
-setDemand!( loc::VRPLocation, demand::Integer ) = loc.demand = demand
-
-getDueDate( loc::VRPLocation ) = loc.dueDate
-setDueDate!( loc::VRPLocation, dueDate::Integer ) = loc.dueDate = dueDate
-
-getServiceTime( loc::VRPLocation ) = loc.serviceTime
-setServiceTime!( loc::VRPLocation, serviceTime::Integer ) =
-  loc.serviceTime = serviceTime
-
-isServiced( loc::VRPLocation ) = loc.serviced
-setServiced!( loc::VRPLocation, serviced::Bool ) =
-  loc.serviced = serviced
-
-getReadyTime( loc::VRPLocation ) = loc.readyTime
-setReadyTime!( loc::VRPLocation, readyTime::Integer ) =
-  loc.readyTime = readyTime
-=#

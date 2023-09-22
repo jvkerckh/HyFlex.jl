@@ -62,7 +62,7 @@ const PD_METHODS = Dict{Function,Vector{Vector{DataType}}}(
   # :string  # from toString
   getNumberOfInstances => [[]],
   bestSolutionToString => [[]],
-  getBestSolutionValue => [[]],
+  # getBestSolutionValue => [[]],
   solutionToString => [[Integer]],
   getFunctionValue => [[Integer]],
   compareSolutions => [[Integer, Integer]],

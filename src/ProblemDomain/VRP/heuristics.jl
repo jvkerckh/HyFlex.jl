@@ -170,7 +170,7 @@ function combine( vrp::VRP, ssid1::Integer, ssid2::Integer, sdid::Integer )
 
   for rt in chosenOnes
     if rand(vrp.rng) < perc
-      push!( newRoutes,rt )
+      push!( newRoutes, rt )
       ri = rt.first
 
       while (ri = ri.next).next != NULL_RI
@@ -211,9 +211,9 @@ function combineLong( vrp::VRP, ssid1::Integer, ssid2::Integer, sdid::Integer )
   @inbounds copyS2 = copySolution(vrp.solutions[ssid2])
   rts1 = copyS1.routes
   rts2 = copyS2.routes
-  locs = Int[]
+  addedLocations = Int[]
   newRoutes = VRPRoute[]
-  orderedRoutes = VRPRoutes[]
+  orderedRoutes = VRPRoute[]
 
   for rt in vcat( rts1, rts2 )
     ii = 0
@@ -232,7 +232,7 @@ function combineLong( vrp::VRP, ssid1::Integer, ssid2::Integer, sdid::Integer )
     isempty(orderedRoutes) && push!( orderedRoutes, rt )
   end
 
-  for rt in ordredRoutes
+  for rt in orderedRoutes
     if useableRoute( rt, addedLocations )
       push!( newRoutes, rt )
       ri = rt.first
@@ -463,9 +463,9 @@ function GENI( vrp::VRP, ssid::Integer, sdid::Integer )
     volume = 0
     ri2 = rt2.first
 
-    while feasible && (ri = ri.next) !== NULL_RI
-      volume += ri.currLocation.demand
-      feasible = ri.timeArrived <= ri.currLocation.dueDate
+    while feasible && (ri2 = ri2.next) !== NULL_RI
+      volume += ri2.currLocation.demand
+      feasible = ri2.timeArrived <= ri2.currLocation.dueDate
     end
 
     volume > vrp.instance.vehicleCapacity && (feasible = false)

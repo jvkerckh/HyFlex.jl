@@ -139,7 +139,7 @@ end
 copySolution( vrp::VRP, ssid::Integer, sdid::Integer ) =
   @inbounds vrp.solutions[sdid] = copySolution(vrp.solutions[ssid])
 
-getNumberOfInstances( vrp::VRP ) = 56
+getNumberOfInstances( ::VRP ) = 56
 
 bestSolutionToString( vrp::VRP ) = string(vrp.bestSolution)
 

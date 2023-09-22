@@ -1,6 +1,6 @@
 module HyFlex
 
-using Random
+using DataStructures, Dates, Random
 
 include("abstracttypes.jl")
 

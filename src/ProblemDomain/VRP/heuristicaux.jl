@@ -342,7 +342,7 @@ function useableRoute( rt::VRPRoute, ls::Vector{Int} )
   ri = rt.first
 
   while (ri = ri.next).next !== NULL_RI
-    any( ls .== ri.currLocation.id ) && return false
+    ri.currLocation.id ∈ ls && return false
   end
 
   true

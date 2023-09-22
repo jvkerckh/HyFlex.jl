@@ -1,11 +1,11 @@
 name = "HyFlex"
 uuid = "91fd1720-3559-46da-9fc7-1cf77dc63782"
 authors = ["Johan Van Kerckhoven <johan.vankerckhoven@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
-LinkedLists = "70f5e60a-1556-5f34-a19e-a48b3e4aaee9"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [compat]
