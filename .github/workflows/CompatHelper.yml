@@ -37,7 +37,11 @@ jobs:
       - name: "Run CompatHelper"
         run: |
           import CompatHelper
-          CompatHelper.main()
+          try
+            CompatHelper.main()
+          catch err
+            @warn string( "Something went wrong.\nAn exception of type ", typeof(err), " was thrown.\nThe error is \"", err, "\"" )
+          end
         shell: julia --color=yes {0}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
